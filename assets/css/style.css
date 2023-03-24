@@ -53,11 +53,23 @@ main {
 }
 
 .sidecontent {
-    border-right: 50px #3D2C2E;
+    background-color: #886F68;
+    color: white;
+    padding: 20px;
+    border-right: 10px solid #3D2C2E;
+    width: 400px;
+    text-align: center;
     float: left;
 }
+    /* aside section will take up  25% of the screen width*/
 
 .sidecontent h2 {
-    font-size: 400%;
+    font-size: 300%;
 }
 /* color palette #D1CCDC #424C55 #F5EDF0 #886F68 #3D2C2E */
+
+.content {
+    margin-left: 470px;
+    font-size: 220%;
+    
+}
