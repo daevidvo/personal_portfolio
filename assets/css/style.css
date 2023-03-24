@@ -51,4 +51,13 @@ main {
     padding: 110px 20px 75px 20px;
     /* padding values in order are "top" "right" "bottom" "left" */
 }
+
+.sidecontent {
+    border-right: 50px #3D2C2E;
+    float: left;
+}
+
+.sidecontent h2 {
+    font-size: 400%;
+}
 /* color palette #D1CCDC #424C55 #F5EDF0 #886F68 #3D2C2E */
