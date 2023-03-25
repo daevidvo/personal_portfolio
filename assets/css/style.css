@@ -1,7 +1,13 @@
+:root {
+    --navbartextcolor: #fff;
+    --bordercolor: 10px solid #3D2C2E;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0px;
+    text-decoration: none;
 }
 
 body {
@@ -12,7 +18,7 @@ body {
 header {
     background-color: #424C55;
     padding: 20px;
-    color: white;
+    color: var(--navbartextcolor);
     position: fixed;
     width: 100%;
 }
@@ -29,7 +35,7 @@ nav {
     padding-right: 30px;
 }
 
-nav ul {
+nav ul, .content ul {
     list-style: none;
     /* hides the bullet points that regularly show up with ul li content */
 }
@@ -41,8 +47,7 @@ nav ul li {
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
+    color: var(--navbartextcolor);
     font-size: 150%;
     font-weight: bolder;
 }
@@ -56,10 +61,12 @@ main {
     background-color: #886F68;
     color: white;
     padding: 20px;
-    border-right: 10px solid #3D2C2E;
+    border-right: var(--bordercolor);
+    border-left: var(--bordercolor);
     width: 400px;
     text-align: center;
     float: left;
+    /* margin-top: 10px; */
 }
     /* aside section will take up  25% of the screen width*/
 
@@ -72,4 +79,28 @@ main {
     margin-left: 470px;
     font-size: 220%;
     
+}
+
+.content li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contactme {
+    text-align: center;
+    color: white;
+    border-top: var(--bordercolor);
+    padding: 20px;
+    background-color: #886F68;
+}
+
+footer {
+    border-top: var(--bordercolor);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    padding: 20px;
 }
