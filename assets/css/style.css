@@ -85,7 +85,7 @@ main {
 .projectscontent {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     max-width: 900px;
     gap: var(--contentmargin);
     margin-top: var(--contentmargin);
