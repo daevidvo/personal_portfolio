@@ -1,5 +1,5 @@
 :root {
-    --navbarfootertextcolor: #fff;
+    --accentcolor1: #52528C;
     --bordercolor: 10px solid #372554;
     --contentmargin: 10px;
 }
@@ -19,9 +19,8 @@ body {
 }
 
 header {
-    background-color: #52528C;
+    background-color: var(--accentcolor1);
     padding: 20px;
-    color: var(--navbarfootertextcolor);
     position: fixed;
     width: 100%;
     text-align: left;
@@ -46,7 +45,7 @@ nav ul li {
 }
 
 nav a {
-    color: var(--navbarfootertextcolor);
+    color: white;
     font-size: 150%;
     font-weight: bolder;
 }
@@ -57,7 +56,7 @@ main {
 }
 
 .contentheader {
-    background-color: #52528C;
+    background-color: var(--accentcolor1);
     padding: 20px;
     border-right: var(--bordercolor);
     border-left: var(--bordercolor);
@@ -113,7 +112,7 @@ main {
 .contactme {
     border-top: var(--bordercolor);
     padding: 20px;
-    background-color: #52528C;
+    background-color: var(--accentcolor1);
 }
 
 footer {
@@ -124,14 +123,13 @@ footer {
 footer a {
     display: inline-block;
     padding: 20px;
-    color: var(--navbarfootertextcolor);
+    color: white;
 }
 
 @media screen and (max-width:992px) {
     .projectscontent {
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     #featuredproject {
