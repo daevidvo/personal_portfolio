@@ -1,3 +1,4 @@
+/* color palette for page is #7C9EB2 #52528C #372554 #231123 #000000 */
 :root {
     --accentcolor1: #52528C;
     --bordercolor: 10px solid #372554;
@@ -11,11 +12,13 @@
     text-decoration: none;
     text-align: center;
     list-style: none;
+    /* changes fonts, font size, sets the margin, removes any link underlines, centers text, and removes any dots or numbers on list items for the entire page */
 }
 
 body {
     background-color: #000000;
     color: white;
+    /* Sets the black background along with white text color for readability */
 }
 
 header {
@@ -24,6 +27,8 @@ header {
     position: fixed;
     width: 100%;
     text-align: left;
+    z-index: 2;
+    /* sets the floating nav bar for the entire page on desktop. z-index 2 so that it doesn't interfere with project titles*/
 }
 
 header h1 {
@@ -48,6 +53,7 @@ nav a {
     color: white;
     font-size: 150%;
     font-weight: bolder;
+    /* changes the typography of the links to the right on the navbar */
 }
 
 main {
@@ -63,33 +69,41 @@ main {
     width: 400px;
     margin-right: auto;
     margin-left: auto;
+    /* This is the header for each of the different sections on the page */
+    /* Sets width, alignment, borders, and the lighter purple background color */
 }
     /* aside section will take up  25% of the screen width*/
 
 .contentheader h2 {
     font-size: 300%;
+    /* Makes the headers of each of the different sections on the page bigger */
 }
-/* color palette #7C9EB2 #52528C #372554 #231123 #000000 */
 
 .aboutme img {
     margin: var(--contentmargin);
     height: 460px;
 }
+/* Makes the portrait photo a fixed height, and establishes margins for it */
 
 .aboutmecontent {
     margin: 20px 0px 20px 0px;
+    /*  */
 }
 
 
 .projectscontent {
     display: flex;
     flex-wrap: wrap;
+    /* makes it so that the items in the flex box are wrapping around based on the screen width instead of being inline together */
     justify-content: space-between;
+    /* items are arranged so they're on either end of the flex box */
     max-width: 900px;
+    /* Max width so that the 440px images doesn't align next to the featured project when viewing on desktop */
     gap: var(--contentmargin);
     margin-top: var(--contentmargin);
     margin-right: auto;
     margin-left: auto;
+    /* above four commands/properties create margins for the items along with align them in the center */
 }
 
 .projectscontent img {
@@ -99,10 +113,46 @@ main {
 
 #featuredprojectmobile {
     display: none;
+    /* hides the mobile featured project when viewing on desktop */
+}
+
+.card::before {
+    background-color: #7C9EB2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    position: absolute;
+    font-size: 50px;
+    z-index: 1;
+    /* sets the card title properties for all of the projects and so we don't repeat this for each individual card*/
+}
+
+#featuredprojectmobile::before {
+    content: "First Project Title";
+}
+#featuredproject::before {
+    content: "First Project Title";
+    /* sets the title for each card and its corresponding id */
+}
+
+#project2::before {
+    content: "Project 2 Title";
+}
+
+#project3::before {
+    content: "Project 3 Title";
+}
+
+#project4::before {
+    content: "Project 4 Title";
+}
+
+#project5::before {
+    content: "Project 5 Title";
 }
 
 .card:hover {
     border: 5px solid #7C9EB2;
+    /* creates a border around the projects when we hover over them */
 }
 
 .projects {
@@ -113,47 +163,57 @@ main {
     border-top: var(--bordercolor);
     padding: 20px;
     background-color: var(--accentcolor1);
+    /* styles the contact me form to have top border along with background color and padding */
 }
 
 footer {
     border-top: var(--bordercolor);
     padding: 20px;
+    /* creates the top border for the footer and completing the contact me top and bottom border */
 }
 
 footer a {
     display: inline-block;
     padding: 20px;
     color: white;
+    /* socials links in the footer are next to each other instead of stacking on top of each other along with changing their text colors and spacing */
 }
 
 @media screen and (max-width:992px) {
     .projectscontent {
         display: flex;
         flex-direction: column;
+        /* fixes rare edge case where screen is large enough to contain two projects in one row instead of having them stack on top of each other on smaller screens*/
     }
 
     #featuredproject {
         display: none;
+        /* hides the wide 900px featured project so that a smaller 440px featured project card can be displayed on mobile formats */
     }
 
     #featuredprojectmobile {
         display: initial;
+        /* shows the 440px featured project card on mobile formats */
     }
 
     header {
         position: initial;
+        /* makes it so that the header is on the top of the webpage instead of always being at the top of the viewport on mobile formats */
     }
 
     header h1 {
         display: block;
+        /* centers "David Vo" in the header when viewing on mobile */
     }
 
     nav {
         float: none;
+        /* removes the right float property applied initially and allows for the nav bar links to be centered along with have a background applied to them*/
     }
 
     nav ul li{
         display: block;
+        /* stacks the nav bar links */
     }
 
     main {
@@ -162,21 +222,25 @@ footer a {
 
     .contentheader {
         width: 80%;
+        /* section headers aren't a fix width anymore and take up 80% of the screen width on mobile formats */
     }
 
     .aboutme img {
         width: 50%;
         height: 50%;
+        /* makes it so that the portrait photo scales with the screen width */
     }
 
     .card {
         margin-right: auto;
         margin-left: auto;
+        /* centers the hover borders on the cards on mobile formats*/
     }
 
     .contactme input {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        /* stacks and centers the contact me input forms */
     }
 }
