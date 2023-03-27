@@ -1,6 +1,7 @@
 :root {
-    --navbartextcolor: #fff;
-    --bordercolor: 10px solid #3D2C2E;
+    --navbarfootertextcolor: #fff;
+    --bordercolor: 10px solid #372554;
+    --contentmargin: 10px;
 }
 
 * {
@@ -8,19 +9,22 @@
     font-size: 20px;
     margin: 0px;
     text-decoration: none;
+    text-align: center;
+    list-style: none;
 }
 
 body {
-    background-color: #D1CCDC;
-    color: black;
+    background-color: #000000;
+    color: white;
 }
 
 header {
-    background-color: #424C55;
+    background-color: #52528C;
     padding: 20px;
-    color: var(--navbartextcolor);
+    color: var(--navbarfootertextcolor);
     position: fixed;
     width: 100%;
+    text-align: left;
 }
 
 header h1 {
@@ -35,11 +39,6 @@ nav {
     padding-right: 30px;
 }
 
-nav ul, .content ul {
-    list-style: none;
-    /* hides the bullet points that regularly show up with ul li content */
-}
-
 nav ul li {
     display: inline-block;
     /* changes the display of the links from blocks to inline with one another */
@@ -47,60 +46,136 @@ nav ul li {
 }
 
 nav a {
-    color: var(--navbartextcolor);
+    color: var(--navbarfootertextcolor);
     font-size: 150%;
     font-weight: bolder;
 }
 
 main {
-    padding: 110px 20px 75px 20px;
+    padding: 110px 20px 20px 20px;
     /* padding values in order are "top" "right" "bottom" "left" */
 }
 
-.sidecontent {
-    background-color: #886F68;
-    color: white;
+.contentheader {
+    background-color: #52528C;
     padding: 20px;
     border-right: var(--bordercolor);
     border-left: var(--bordercolor);
     width: 400px;
-    text-align: center;
-    float: left;
-    /* margin-top: 10px; */
+    margin-right: auto;
+    margin-left: auto;
 }
     /* aside section will take up  25% of the screen width*/
 
-.sidecontent h2 {
+.contentheader h2 {
     font-size: 300%;
 }
-/* color palette #D1CCDC #424C55 #F5EDF0 #886F68 #3D2C2E */
+/* color palette #7C9EB2 #52528C #372554 #231123 #000000 */
 
-.content {
-    margin-left: 470px;
-    font-size: 220%;
-    
+.aboutme img {
+    margin: var(--contentmargin);
+    height: 460px;
 }
 
-.content li {
+.aboutmecontent {
+    margin: 20px 0px 20px 0px;
+}
+
+
+.projectscontent {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 900px;
+    gap: var(--contentmargin);
+    margin-top: var(--contentmargin);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.projectscontent img {
+    vertical-align: bottom;
+}
+/* gets rid of padding at the bottom of images. credits: https://stackoverflow.com/questions/14053952/why-is-there-padding-at-the-bottom-of-my-image */
+
+#featuredprojectmobile {
+    display: none;
+}
+
+.card:hover {
+    border: 5px solid #7C9EB2;
+}
+
+.projects {
+    margin-top: 1%;
 }
 
 .contactme {
-    text-align: center;
-    color: white;
     border-top: var(--bordercolor);
     padding: 20px;
-    background-color: #886F68;
+    background-color: #52528C;
 }
 
 footer {
     border-top: var(--bordercolor);
     padding: 20px;
-    text-align: center;
 }
 
 footer a {
     display: inline-block;
     padding: 20px;
+    color: var(--navbarfootertextcolor);
+}
+
+@media screen and (max-width:992px) {
+    .projectscontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #featuredproject {
+        display: none;
+    }
+
+    #featuredprojectmobile {
+        display: initial;
+    }
+
+    header {
+        position: initial;
+    }
+
+    header h1 {
+        display: block;
+    }
+
+    nav {
+        float: none;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    main {
+        padding-top: 10px;
+    }
+
+    .contentheader {
+        width: 80%;
+    }
+
+    .aboutme img {
+        width: 50%;
+        height: 50%;
+    }
+
+
+
+    .contactme input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
