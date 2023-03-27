@@ -16,13 +16,16 @@
                 <li><a href="#aboutme">About Me</a> </li>
                 <li><a href="#projects">Projects</a> </li>
                 <li><a href="#contactme">Contact</a> </li>
+                <li><a href="#socials">Socials</a> </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="aboutme" id="aboutme">
+        <!-- id allows for nav bar link to work along with assigning aboutme class so we can edit the img properties -->
             <section class="contentheader">
+            <!-- sets the contentheader properties (larger heading text, background color, and borders) -->
                 <h2>About Me</h2>
             </section>
             
@@ -32,37 +35,44 @@
             </figure>
 
             <section class="aboutmecontent">
+            <!-- class for margins -->
                 <p>With a strong background in business administration, marketing, and data analytics, I aim to create the best in class software and websites to deliver a premium user experience.</p>
+                <p>My current tech stack: python, C++, Git, and JavaScript</p>
             </section>
         </div>
 
         <div class="projects" id="projects">
+        <!-- sets class to projects along with id to projects for nav link -->
             <section class="contentheader">
+            <!-- sets the contentheader properties (larger heading text, background color, and borders) -->
                 <h2>Projects</h2>
             </section>
     
             <section class="projectscontent">
+            <!-- class projectscontent applies project title styling -->
                 <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="featuredproject">
-                    <img src="./assets/images/900x300.png"/>
+                <!-- gave each different project its own ID so we can edit the titles of them later on -->
+                    <img src="https://via.placeholder.com/900x300"/>
+                    <!-- placeholders for now until I get applications up and running -->
                 </a>
 
                 <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="featuredprojectmobile">
                     <img src="https://via.placeholder.com/440x300"/>
                 </a>
     
-                <a href="https://youtu.be/dQw4w9WgXcQ" class="card">
+                <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="project2">
                     <img src="https://via.placeholder.com/440x300"/>
                 </a>
     
-                <a href="https://youtu.be/dQw4w9WgXcQ" class="card">
+                <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="project3">
                     <img src="https://via.placeholder.com/440x300"/>
                 </a>
     
-                <a href="https://youtu.be/dQw4w9WgXcQ" class="card">
+                <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="project4">
                     <img src="https://via.placeholder.com/440x300"/>
                 </a>
     
-                <a href="https://youtu.be/dQw4w9WgXcQ" class="card">
+                <a href="https://youtu.be/dQw4w9WgXcQ" class="card" id="project5">
                     <img src="https://via.placeholder.com/440x300"/>
                 </a>
             </section>
@@ -70,18 +80,21 @@
     </main>
 
     <section class="contactme" id="contactme">
+    <!-- class for styling and id for nav bar link -->
         <h2>Contact Me</h2>
 
         <form>
+        <!-- contact me form that allows users to put their name, email, and message -->
             <label>Enter Your Name</label>
-            <input type="text" placeholder="First Name"/>
-            <input type="text" placeholder="Last Name"/>
+            <input type="text" placeholder="Name"/>
+            <input type="text" placeholder="Email"/>
             <input type="text" placeholder="Message"/>
             <input type="submit" value="Send"/>
         </form>
     </section>
 
-    <footer>
+    <footer id="socials">
+    <!-- Footer for socials media. ID is there so nav bar link works -->
         <h2>Socials</h2>
 
         <a href="https://www.linkedin.com/in/daevidvo"><h3>Linkedin</h3></a>
