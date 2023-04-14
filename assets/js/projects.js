@@ -78,7 +78,8 @@ class StarrySky extends React.Component {
               />
             ))}
           </svg>
-          <div id="shootingstars">
+          <div id="shootingstars" class="u-z-n1"> 
+          {/* have to set z-index above to -1 or else we won't be able to click on buttons */}
             {[...Array(60)].map((x, y) => (
               <div
                 key={y}
