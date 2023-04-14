@@ -12,6 +12,8 @@
 
   <body>
 
+
+    
     <div class="header header-fixed u-unselectable header-animated">
         <div class="header-brand">
             <div class="nav-item no-hover">
@@ -21,7 +23,7 @@
                 <span></span>
                 <span></span>
                 <span></span>                 
-            </a> 
+            </a>    
         </div>
         <div class="header-nav" id="header-menu">
             <div class="nav-left">
@@ -53,7 +55,7 @@
                 <div class="nav-item has-sub toggle-hover" id="dropdown">
                     <a class="nav-dropdown-link">Learn More</a>
                     <ul class="dropdown-menu dropdown-animated" role="menu">
-                        <li role="menu-item"><a href="./projects.html">Projects</a></li>
+                        <li role="menu-item"><a href="./index.html">Home</a></li>
                         <li role="menu-item"><a href="./contactme.html">Contact Me</a></li>
                     </ul>
                 </div>
@@ -61,52 +63,76 @@
         </div>
     </div>
 
-    <div class="row u-justify-center" style="margin-top:80px;" id="aboutMeCard">
-        <div class="col-12" style="max-width: 500px;">
-            <div class="frame bg-white">
-                <div class="frame__header u-text-center">
-                    <div>
-                        <figure class="avatar avatar--xl">
-                            <img
-                                src="./assets/images/IMG_3700.jpg"
-                            />
-                        </figure>
+
+    <div class="row u-justify-center mx-3" style="margin-top: 80px;">
+        <div class="u-flex-xl u-block-lg u-gap-3">
+            <div class="projectCards">
+                <div class="card card--slide-up" style="width: 450px;">
+                    <div class="card__container">
+                        <div class="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
                     </div>
-                    <div>
-                        <h6 class="frame__title">David Vo</h6>
-                        <div class="frame__subtitle">Software and Full Stack Developer</div>
+                    <div class="card__mobile-title">
+                        <div class="content mx-3">
+                            <div class="tile">
+                                <div class="tile__container">
+                                    <p class="tile__title">Cheerio &#129303;</p>
+                                    <p class="tile__subtitle">By David Vo, Bryan Nguyen, and Kenneth Cruz</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <a class="col" href="https://www.github.com/daevidvo" target="_blank"><i class="fa fa-2x fa-wrapper fa-github link-btn" aria-hidden="true"></i></a>
-                        <a class="col" href="https://www.instagram.com/daevidvo" target="_blank"><i class="fa fa-2x fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a>
-                        <a class="col" href="https://www.linkedin.com/in/daevidvo" target="_blank"><i class="fa fa-2x fa-wrapper fa-linkedin link-btn" aria-hidden="true"></i></a>
+                    <div class="card__body content mx-3">
+                        <p>A simple app inspire and invoke stoicism to its users</p>
                     </div>
-                </div>
-                <div class="divider m-0"></div>
-                <div class="frame__body">
-                    <div class="content u-text-center">
-                        <h5>Hello!</h5>
-                        <p>
-                            I'm a team-oriented and data-driven developer looking to build and implement the best in class software. With strong experience working at 
-                            Seattle-based startups, I aim to deliver value, improve processes, and increase efficiency.
-                        </p>
-                    </div>
-                </div>
-                <div class="divider m-0"></div>
-                <div class="frame__footer">
-                    <div class="frame__subtitle u-text-center">
-                        <i>
-                            In my free time I love cooking, olympic weightlifting, photography, and machine learning development.
-                        </i>
-                    </div>
+                    <div class="card__footer content mx-3">April 2023</div>
                 </div>
             </div>
+            <div class="projectCards">
+                <div class="card card--slide-up" style="width: 450px;">
+                    <div class="card__container">
+                        <div class="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
+                    </div>
+                    <div class="card__mobile-title">
+                        <div class="content mx-3">
+                            <div class="tile">
+                                <div class="tile__container">
+                                    <p class="tile__title">TBD</p>
+                                    <p class="tile__subtitle">By David Vo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__body content mx-3">
+                        <p>To be written</p>
+                    </div>
+                    <div class="card__footer content mx-3">Sometime, Some Year</div>
+                </div>
+            </div>
+            <div class="projectCards">
+                <div class="card card--slide-up" style="width: 450px;">
+                    <div class="card__container">
+                        <div class="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
+                    </div>
+                    <div class="card__mobile-title">
+                        <div class="content mx-3">
+                            <div class="tile">
+                                <div class="tile__container">
+                                    <p class="tile__title">TBD</p>
+                                    <p class="tile__subtitle">By David Vo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__body content mx-3">
+                        <p>To be written</p>
+                    </div>
+                    <div class="card__footer content mx-3">Sometime, Some Year</div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div class="row u-justify-center" id="projectsButton">
-        <a href="./projects.html"><button class="text-red-600 bg-white btn--xl">projects</button></a>
-    </div>
+    
 
     <div class="modal modal-animated--dropdown" id="mobilemodal">
         <a href="#components" class="modal-overlay close-btn" aria-label="Close"></a>
@@ -117,11 +143,12 @@
             </div>
             <div class="modal-body">
                 <div class="my-1">
-                    <a href="./projects.html"><button class="text-white bg-gray-800 btn--xl">Projects</button></a>
+                    <a href="./index.html"><button class="text-white bg-gray-800 btn--xl">home</button></a>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 
@@ -134,6 +161,6 @@
 
 
     <div id="background"/>
-    <script type="text/babel" src="./assets/js/index.js"></script>
+    <script type="text/babel" src="./assets/js/projects.js"></script>
   </body>
 </html>
