@@ -98,19 +98,19 @@ class StarrySky extends React.Component {
   ReactDOM.render(<StarrySky />, document.getElementById("background"));
 
 
-  anime({
-    targets: '#aboutMeCard',
-    scale: [0.9, 1], 
-    easing: 'easeInOutQuad',
-    opacity: [0, 1],
-    duration: 1000
-});
-  anime({
-    targets: '#projectsButton',
-    scale: [0.9, 1], 
-    easing: 'easeInOutQuad',
-    opacity: [0, 1],
-    duration: 500,
-    delay: 1000
-});
+//   anime({
+//     targets: '#aboutMeCard',
+//     scale: [0.9, 1], 
+//     easing: 'easeInOutQuad',
+//     opacity: [0, 1],
+//     duration: 1000
+// });
+//   anime({
+//     targets: '#projectsButton',
+//     scale: [0.9, 1], 
+//     easing: 'easeInOutQuad',
+//     opacity: [0, 1],
+//     duration: 500,
+//     delay: 1000
+// });
   
